@@ -12,7 +12,7 @@ new function() {
 
 	var open = function() {
 		var url = serverUrl.val();
-		ws = new WebSocket(url);
+		ws = new WebSocket(url, 'echo-protocol');
 		ws.onopen = onOpen;
 		ws.onclose = onClose;
 		ws.onmessage = onMessage;
